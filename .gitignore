@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/TestEnvironment-mobile-app/FileContentIndex/2435b572-1e4e-4918-8b85-d4a73e787f5a.vsidx
+*.vsidx
+*.lock
+/.vs/slnx.sqlite
