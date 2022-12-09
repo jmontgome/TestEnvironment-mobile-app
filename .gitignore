@@ -14,3 +14,4 @@ node_modules
 *.json
 /.vs/VSWorkspaceState.json
 /.vs/TestEnvironment-mobile-app/v17/.wsuo
+*.pack
