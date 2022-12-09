@@ -9,3 +9,8 @@
 /.vs/TestEnvironment-mobile-app/FileContentIndex/fba27456-915c-427d-a5fb-0aa186a7da7b.vsidx
 /.vs/TestEnvironment-mobile-app/FileContentIndex/fba27456-915c-427d-a5fb-0aa186a7da7b.vsidx
 /.vs/TestEnvironment-mobile-app/FileContentIndex/fba27456-915c-427d-a5fb-0aa186a7da7b.vsidx
+node_modules
+/.vs/VSWorkspaceState.json
+*.json
+/.vs/VSWorkspaceState.json
+/.vs/TestEnvironment-mobile-app/v17/.wsuo
