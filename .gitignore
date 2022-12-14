@@ -67,4 +67,4 @@ testem.log
 .DS_Store
 Thumbs.db
 *.vsidx
-/.vs/TestEnvironment-mobile-app/FileContentIndex/write.lock
+/.vs/TestEnvironment-mobile-app/FileContentIndex
