@@ -66,3 +66,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+*.vsidx
+/.vs/TestEnvironment-mobile-app/FileContentIndex/write.lock
