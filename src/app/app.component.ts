@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+
+  BackButtonClick() {
+    console.log("Back Button clicked!");
+  }
+  ForwardButtonClick() {
+    console.log("Forward Button clicked!");
+  }
 }

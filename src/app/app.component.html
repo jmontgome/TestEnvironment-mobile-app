@@ -1,13 +1,36 @@
 <ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Main Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the main stuff.</ion-content>
+  </ion-menu>
+  
   <ion-header>
     <ion-toolbar>
-      <ion-button color="secondary" slot="start">Back</ion-button>
-      <ion-button color="secondary" slot="end">Forward</ion-button>
+      <ion-button color="secondary" slot="start" (click)="BackButtonClick()">Back</ion-button>
+      <ion-button color="secondary" slot="end" (click)="ForwardButtonClick()">Forward</ion-button>
+    </ion-toolbar>
+    <ion-toolbar id="main-content">
+      <ion-buttons>
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
       <ion-title>
         Mobile App Testing
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-router-outlet style="margin-top: 60px;">
+
+  <ion-router-outlet style="margin-top: 100px; margin-bottom: 50px;">
   </ion-router-outlet>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title style="font-size:x-small">
+        Logged In As: Jonathon Montgomery
+      </ion-title>
+    </ion-toolbar>
+  </ion-footer>
 </ion-app>
