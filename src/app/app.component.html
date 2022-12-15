@@ -5,14 +5,18 @@
         <ion-title>Main Menu</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">This is the main stuff.</ion-content>
+    <ion-content>
+        <ion-list *ngFor="let route of GetRoutes()">
+          <ion-menu-toggle>
+            <ion-button color="secondary" [routerLink]="['/'+route.path]">
+              {{ route.title }}
+            </ion-button>
+          </ion-menu-toggle>
+        </ion-list>
+    </ion-content>
   </ion-menu>
   
   <ion-header>
-    <ion-toolbar>
-      <ion-button color="secondary" slot="start" (click)="BackButtonClick()">Back</ion-button>
-      <ion-button color="secondary" slot="end" (click)="ForwardButtonClick()">Forward</ion-button>
-    </ion-toolbar>
     <ion-toolbar id="main-content">
       <ion-buttons>
         <ion-menu-button></ion-menu-button>
@@ -21,15 +25,19 @@
         Mobile App Testing
       </ion-title>
     </ion-toolbar>
+    <!--<ion-toolbar *ngIf="ShowSequenceNavigation">
+      <ion-button color="secondary" slot="start" (click)="BackButtonClick()">Back</ion-button>
+      <ion-button color="secondary" slot="end" (click)="ForwardButtonClick()">Forward</ion-button>
+    </ion-toolbar>-->
   </ion-header>
 
-  <ion-router-outlet style="margin-top: 100px; margin-bottom: 50px;">
+  <ion-router-outlet style="margin-top: 35px; margin-bottom: 40px;">
   </ion-router-outlet>
 
   <ion-footer>
     <ion-toolbar>
       <ion-title style="font-size:x-small">
-        Logged In As: Jonathon Montgomery
+        <ion-button color="secondary">{{ GetUsername() }}</ion-button>
       </ion-title>
     </ion-toolbar>
   </ion-footer>
