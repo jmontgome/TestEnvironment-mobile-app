@@ -1,13 +1,30 @@
-:root {
-  /** secondary **/
-  --ion-color-secondary: #3881ff00;
-  --ion-color-secondary-rgb: 61, 194, 255;
-  --ion-color-secondary-contrast: #3881ff;
-  --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #36aae018;
-  --ion-color-secondary-tint: #55c9ff17;
+.ion-header-color {
+  --background: #54d61c;
 }
 
 ion-button {
     font-size:1.2em;
+}
+
+ion-radio {
+  --border-radius: 4px;
+  --inner-border-radius: 4px;
+  
+  width: 20px;
+  height: 20px;
+}
+ion-radio::part(container) {
+  border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, 0)
+}
+ion-radio::part(mark) {
+  border-radius: 0;
+}
+ion-radio.radio-checked::part(container) {
+  background-color: rgba(0, 110, 255, 0);
+}
+ion-radio.radio-checked::part(mark) {
+  width:6px;
+  height:10px;
+  border-color: rgb(0, 140, 255);
 }

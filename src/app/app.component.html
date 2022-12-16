@@ -1,14 +1,15 @@
 <ion-app>
+  <!--Sidebar Menu-->
   <ion-menu contentId="main-content">
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar color="light">
         <ion-title>Main Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
         <ion-list *ngFor="let route of GetRoutes()">
           <ion-menu-toggle>
-            <ion-button color="secondary" [routerLink]="['/'+route.path]">
+            <ion-button color="primary" [routerLink]="['/'+route.path]">
               {{ route.title }}
             </ion-button>
           </ion-menu-toggle>
@@ -16,10 +17,11 @@
     </ion-content>
   </ion-menu>
   
+  <!--Heading-->
   <ion-header>
-    <ion-toolbar id="main-content">
+    <ion-toolbar id="main-content" color="light">
       <ion-buttons>
-        <ion-menu-button></ion-menu-button>
+        <ion-menu-button color="secondary"></ion-menu-button>
       </ion-buttons>
       <ion-title>
         Mobile App Testing
@@ -31,13 +33,15 @@
     </ion-toolbar>-->
   </ion-header>
 
+  <!--Body-->
   <ion-router-outlet style="margin-top: 35px; margin-bottom: 40px;">
   </ion-router-outlet>
 
+  <!--Footer-->
   <ion-footer>
-    <ion-toolbar>
+    <ion-toolbar color="light">
       <ion-title style="font-size:x-small">
-        <ion-button color="secondary">{{ GetUsername() }}</ion-button>
+        <ion-button color="primary">{{ GetUsername() }}</ion-button>
       </ion-title>
     </ion-toolbar>
   </ion-footer>
