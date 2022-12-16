@@ -9,11 +9,24 @@
     <ion-content>
         <ion-list *ngFor="let route of GetRoutes()">
           <ion-menu-toggle>
-            <ion-button color="primary" [routerLink]="['/'+route.path]">
+            <ion-button color="tertiary" [routerLink]="['/'+route.path]">
               {{ route.title }}
             </ion-button>
           </ion-menu-toggle>
         </ion-list>
+        <ion-accordion-group>
+          <ion-accordion value="account-settings">
+            <ion-item slot="header">
+              <ion-label color="secondary">Account and Settings</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">
+              <ion-menu-toggle>
+                <ion-item color="tertiary" >Account</ion-item>
+                <ion-item color="tertiary" [routerLink]="['/settings']">Settings</ion-item>
+              </ion-menu-toggle>
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
     </ion-content>
   </ion-menu>
   
@@ -41,7 +54,7 @@
   <ion-footer>
     <ion-toolbar color="light">
       <ion-title style="font-size:x-small">
-        <ion-button color="primary">{{ GetUsername() }}</ion-button>
+        <ion-button color="tertiary">{{ GetUsername() }}</ion-button>
       </ion-title>
     </ion-toolbar>
   </ion-footer>

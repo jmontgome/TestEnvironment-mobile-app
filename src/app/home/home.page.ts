@@ -13,7 +13,6 @@ export class HomePage {
   constructor(private actionSheetControl : ActionSheetController) {}
 
   async presentActionSheet() {
-    console.log("An Action sheet menu is opened.");
     const actionSheet = await this.actionSheetControl.create({
       header: "Example header",
       subHeader: 'Example subheader',

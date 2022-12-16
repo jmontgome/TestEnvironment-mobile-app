@@ -18,4 +18,7 @@ export class SettingsPage implements OnInit {
   SetAppearanceMode(mode: string) {
     document.body.classList.value = mode;
   }
+  ToggleAppearanceMode() {
+    document.body.classList.toggle("dark");
+  }
 }
