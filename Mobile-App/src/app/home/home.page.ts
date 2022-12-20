@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
-import { ValueFromNotification } from 'rxjs';
+import { APIService } from '../data/Models/APIService';
+import { HttpClient } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +13,9 @@ import { ValueFromNotification } from 'rxjs';
 })
 export class HomePage {
   result: string | undefined;
+  messageInput: string = "";
 
-  constructor(private actionSheetControl : ActionSheetController) {}
+  constructor(private actionSheetControl : ActionSheetController, private http: HttpClient) {}
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetControl.create({
@@ -22,6 +27,7 @@ export class HomePage {
           data: {
             action: 'submit',
           },
+          handler: () => this.SubmitToServer(),
         },
         {
           text: 'No',
@@ -45,6 +51,11 @@ export class HomePage {
     const result = await actionSheet.onDidDismiss();
     this.result = JSON.stringify(result, null, 2);
     console.log(result);
+  }
+  async SubmitToServer() {
+    var api = new APIService(this.http);
+    console.log(api.SendTestObjectToServer(this.messageInput));
+    console.log(api.SendSimpleTestToServer(this.messageInput));
   }
 
   labelString() {

@@ -1,5 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
+API.Options.CORSOptions.BuildOptions(builder);
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -18,7 +20,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseCors(API.Options.CORSOptions.CORSOptionsKey);
 
 app.MapControllers();
 

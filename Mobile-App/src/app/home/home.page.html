@@ -44,6 +44,10 @@
         <ion-label>Phone Number</ion-label>
         <ion-input placeholder="(XXX) XXX-XXXX"></ion-input>
       </ion-item>
+      <ion-item>
+        <ion-label>Message (for Server Test)</ion-label>
+        <ion-input [(ngModel)]="messageInput" placeholder="Message"></ion-input>
+      </ion-item>
       <div class="ion-text-center">
         <ion-button color="tertiary" style="margin-top: 15px;" (click)="presentActionSheet()">Submit</ion-button>
       </div>
