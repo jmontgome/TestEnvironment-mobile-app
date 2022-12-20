@@ -13,12 +13,12 @@ $RECYCLE.BIN/
 log.txt
 
 
-/.sourcemaps
-/.versions
+/Mobile-App/.sourcemaps
+/Mobile-App/.versions
 /coverage
 
 # Ionic
-/.ionic
+/Mobile-App/.ionic
 /www
 /platforms
 /plugins
@@ -54,8 +54,8 @@ yarn-error.log
 
 
 # Miscellaneous
-/.angular
-/.angular/cache
+/Mobile-App/.angular
+/Mobile-App/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
@@ -70,7 +70,7 @@ Thumbs.db
 /.vs/TestEnvironment-mobile-app/FileContentIndex
 /.vs/VSWorkspaceState.json
 /.vs/slnx.sqlite
-/.vs/TestEnvironment-mobile-app/v17/.wsuo
+/.vs/TestEnvironment-mobile-app/v17/Mobile-App/.wsuo
 
 #Imported from Visual Studio .gitignore file
 # Visual Studio 2017 auto generated files
@@ -516,7 +516,7 @@ ipch/
 *.vsp
 *.vspx
 *.sap
-
+
 # Visual Studio Trace Files
 *.e2e
 
@@ -760,3 +760,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Mobile-App/.vscode
